@@ -1,7 +1,7 @@
 #include "terreno.hpp"
 
 Terreno::Terreno() :nombre("NAN"), filas(0), columnas(0), precio(0.0){
-	
+	/*Constructor para arreglos*/
 }
 
 Terreno::Terreno(string _nombre,int _filas, int _columnas, float _precio){
