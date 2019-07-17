@@ -12,7 +12,7 @@ class Persona{
 	public:
 		string nombre;
 		int dinero;
-		Terreno *papeles;
+		Terreno **papeles;
 		int longitud;
 	//public:
 		Persona(string);
