@@ -1,10 +1,10 @@
 #include "terreno.hpp"
 
-Terreno::Terreno() :nombre("NAN"), filas(0), columnas(0), precio(0.0){
+Terreno::Terreno() :nombre("NAN"), filas(0), columnas(0), precio(0), direccion("NAN"){
 	/*Constructor para arreglos*/
 }
 
-Terreno::Terreno(string _nombre,int _filas, int _columnas, float _precio){
+Terreno::Terreno(string _nombre,int _filas, int _columnas, int _precio){
 
 	/*Asigna un valor al terreno*/
 	precio = _precio;
@@ -65,8 +65,6 @@ Terreno::Terreno(string _nombre,int _filas, int _columnas, float _precio){
 			}
 		}
 	}
-
-
 }
 
 Terreno::~Terreno(){
@@ -77,9 +75,9 @@ Terreno::~Terreno(){
 	}
 
 	/*Se libera la memoria del arreglo*/
-	delete[] matriz;
+	delete[] matriz;	
 
-	cout << "Murio" << endl;
+	cout << "Murio" << endl;	
 }
 
 void Terreno::Imprimir(){
@@ -188,4 +186,12 @@ bool Terreno::Construir(int x,int y,char elemento){
 
 	/*Retorna el valor de la bandera*/
 	return done;
+}
+
+string Terreno::Get_Nombre(){
+	return nombre;
+}
+
+int Terreno::Get_Precio(){
+	return precio;
 }
