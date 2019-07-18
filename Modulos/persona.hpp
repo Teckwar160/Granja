@@ -9,15 +9,18 @@
 
 
 class Persona{
-	public:
+	private:
 		string nombre;
-		int dinero;
-		Terreno **papeles;
+		Terreno *papeles;
 		int longitud;
-	//public:
+		int dinero;
+		int contador;
+	public:
 		Persona(string);
 		~Persona();
+		bool Comprar(int,Terreno*);
 		bool Redimensionar();
+		void Mostrar();
 };
 
 #endif
